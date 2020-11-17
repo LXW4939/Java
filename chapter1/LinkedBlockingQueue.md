@@ -17,7 +17,6 @@ static class Node<E> {
 主要成员变量
 
 ```
-
 // 链表的容量（若不指定则为 Integer.MAX_VALUE）
 private final int capacity;
 
@@ -367,7 +366,9 @@ public E peek() {
 
 LinkedBlockingQueue与ArrayBlockingQueue的区别：
 
-1. ArrayBlockingQueue使用单个锁，可以指定是否
+1. ArrayBlockingQueue使用单个锁，可以指定是否公平；而LinkedBlockingQueue内部使用两个锁：putLock和takeLock，都是非公平锁
+2. 入队和出队区别
+   1. 入队时，
 
 
 

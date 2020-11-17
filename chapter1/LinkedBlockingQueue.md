@@ -368,7 +368,8 @@ LinkedBlockingQueue与ArrayBlockingQueue的区别：
 
 1. ArrayBlockingQueue使用单个锁，可以指定是否公平；而LinkedBlockingQueue内部使用两个锁：putLock和takeLock，都是非公平锁
 2. 入队和出队区别
-   1. 入队时，
+   * 入队时，LinkedBlockingQueue会判断当前元素入队后，队列是否已满，若未满，则唤醒其他生产者线程；如队列后，当队列之前为空时才唤醒其他消费者线程；ArrayBlockingQueue在每次入队都会唤醒消费者线程；
+   * 出队时，LinkedBlockingQueue会判断当前元素出队后，队列是否为空，若未空，则唤醒其他消费者线程；而出队后，当队列之前为满时才唤醒其他生产者线程；ArrayBlockingQueue则是每次出队都会唤醒生产者线程
 
 
 

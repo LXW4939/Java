@@ -1,8 +1,8 @@
-#                            Array**BlockingQueue**
+# Array**BlockingQueue**
 
 ```java
 public class ArrayBlockingQueue<E> extends AbstractQueue<E>
-        implements BlockingQueue<E>, java.io.Serializable 
+        implements BlockingQueue<E>, java.io.Serializable
 ```
 
 继承AbstractQueue接口并实现了BlockingQueue和Serializable接口
@@ -140,9 +140,9 @@ public E take() throws InterruptedException {
 
 1.ArrayBlockingQueue队列是基于数组+Condition类来实现的；
 
-2. 线程安全是基于ReentrantLock来保证的
+1. 线程安全是基于ReentrantLock来保证的
 
-3. 队列中不允许元素为空；
+2. 队列中不允许元素为空；
 
 
 

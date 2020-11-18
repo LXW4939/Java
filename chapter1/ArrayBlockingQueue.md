@@ -92,7 +92,7 @@ public void put(E e) throws InterruptedException {
 
 #### Take方法
 
-功能：取出队列中的队首元素，如果为空，则等待直至队列非空
+功能：取出队列中的队首元素，如果`为空，则等待直至队列非`空
 
 思路：
 
